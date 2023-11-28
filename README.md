@@ -110,7 +110,7 @@ put all the videos under ```data/```.
 ```
 cp WLASL2000 -r data/
 ```
-To train models, first download [I3D weights pre-trained Kinetics](https://drive.google.com/file/d/1JgTRHGBRCHyHRT_rAF0fOjnfiFefXkEd/view?usp=sharing) and unzip it. You should see a folder ```I3D/weights/```.
+To train models, you can download the weights [I3D weights pre-trained Kinetics](https://drive.google.com/file/d/1JgTRHGBRCHyHRT_rAF0fOjnfiFefXkEd/view?usp=sharing) and unzip it. You should see a folder ```I3D/weights/```. Note, that the weights have been downloaded and included in the code/I3D/weights folder.
 
 ```
 python train_i3d.py
