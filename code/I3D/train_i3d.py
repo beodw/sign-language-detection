@@ -55,6 +55,7 @@ def run(configs,
                                              pin_memory=True)
 
     val_dataset = Dataset(train_split, 'test', root, mode, test_transforms)
+
     val_dataloader = torch.utils.data.DataLoader(val_dataset, batch_size=configs.batch_size, shuffle=True, num_workers=2,
                                                  pin_memory=False)
 
@@ -110,7 +111,7 @@ def run(configs,
             num_iter = 0
             optimizer.zero_grad()
 
-            confusion_matrix = np.zeros((num_classes, num_classes), dtype=np.int)
+            confusion_matrix = np.zeros((num_classes, num_classes), dtype=np.int8)
             # Iterate over data.
             for data in dataloaders[phase]:
                 num_iter += 1

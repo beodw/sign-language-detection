@@ -49,11 +49,14 @@ def load_rgb_frames_from_video(vid_root, vid, start, num, resize=(256, 256)):
 
     total_frames = vidcap.get(cv2.CAP_PROP_FRAME_COUNT)
 
-    vidcap.set(cv2.CAP_PROP_POS_FRAMES, start)
+    # vidcap.set(cv2.CAP_PROP_POS_FRAMES, start)
+    # Fix issue with resetting the loading of data using vidcap
     for offset in range(min(num, int(total_frames - start))):
+        vidcap.set(cv2.CAP_PROP_POS_FRAMES, start)
         success, img = vidcap.read()
-
+       
         w, h, c = img.shape
+
         if w < 226 or h < 226:
             d = 226. - min(w, h)
             sc = 1 + d / min(w, h)
@@ -177,7 +180,6 @@ class NSLT(data_utl.Dataset):
             start_f = random.randint(0, nf - total_frames - 1) + start_frame
         except ValueError:
             start_f = start_frame
-
         imgs = load_rgb_frames_from_video(self.root['word'], vid, start_f, total_frames)
 
         imgs, label = self.pad(imgs, label, total_frames)
