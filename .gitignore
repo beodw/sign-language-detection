@@ -6,7 +6,7 @@ start_kit/videos/
 
 */__pycache__
 code/I3D/archived/
-# *.pt
+*.pt
 
 *.zip
 
