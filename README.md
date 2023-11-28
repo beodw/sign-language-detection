@@ -1,11 +1,14 @@
-WLASL: A large-scale dataset for Word-Level American Sign Language (WACV 20' Best Paper Honourable Mention)
+American Sign Language to English
 ============================================================================================
 
-This repository contains the `WLASL` dataset described in "Word-level Deep Sign Language Recognition from Video: A New Large-scale Dataset and Methods Comparison".
+This repository contains the code for word to word translation from American Sign Language to English. This model is part of a larger project that aims to incorporate multiple modalities
+for interacting with LLM's and addresses the issue of accessibility. It is based on the WLASL paper and you can find more details on this below.
 
 Please visit the [project homepage](https://dxli94.github.io/WLASL/) for news update.
 
 Please **star the repo** to help with the visibility if you find it useful.
+
+# Steps for running the model
 
 **yt-dlp vs youtube-dl** youtube-dl has had low maintance for a while now and does not work for some youtube videos, see this [issue](https://github.com/ytdl-org/youtube-dl/issues/30568).
 [yt-dlp](https://github.com/yt-dlp/yt-dlp) is a more up to date fork, which seems to work for all youtube videos. Therefore `./start_kit/video_downloader.py` uses yt-dlp by default but can be switched back to youtube-dl in the future by adjusting the `youtube_downloader` variable.
@@ -136,62 +139,4 @@ To test the model, first download [pre-trained models](https://drive.google.com/
 python test_tgcn.py
 ```
 
-License
----------------
-Licensed under the Computational Use of Data Agreement (C-UDA). Plaese refer to `C-UDA-1.0.pdf` for more information.
 
-Disclaimer
----------------
-All the WLASL data is intended for academic and computational use only. No commercial usage is allowed. We highly respect copyright and privacy. If you find WLASL violates your rights, please contact us.
-
-
-
-
-Citation
---------------
-
-Please cite the WLASL paper if it helps your research:
-
-     @inproceedings{li2020word,
-        title={Word-level Deep Sign Language Recognition from Video: A New Large-scale Dataset and Methods Comparison},
-        author={Li, Dongxu and Rodriguez, Cristian and Yu, Xin and Li, Hongdong},
-        booktitle={The IEEE Winter Conference on Applications of Computer Vision},
-        pages={1459--1469},
-        year={2020}
-     }
-
-Please consider citing our work on WLASL.
-
-    @inproceedings{li2020transferring,
-     title={Transferring cross-domain knowledge for video sign language recognition},
-     author={Li, Dongxu and Yu, Xin and Xu, Chenchen and Petersson, Lars and Li, Hongdong},
-     booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-     pages={6205--6214},
-     year={2020}
-    }
-
-Other works you might be interested in.
-
-    @article{li2020tspnet,
-      title={Tspnet: Hierarchical feature learning via temporal semantic pyramid for sign language translation},
-      author={Li, Dongxu and Xu, Chenchen and Yu, Xin and Zhang, Kaihao and Swift, Benjamin and Suominen, Hanna and Li, Hongdong},
-      journal={Advances in Neural Information Processing Systems},
-      volume={33},
-      pages={12034--12045},
-      year={2020}
-    }
-
-    @inproceedings{li2022transcribing,
-      title={Transcribing natural languages for the deaf via neural editing programs},
-      author={Li, Dongxu and Xu, Chenchen and Liu, Liu and Zhong, Yiran and Wang, Rong and Petersson, Lars and Li, Hongdong},
-      booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-      volume={36},
-      number={11},
-      pages={11991--11999},
-      year={2022}
-    }
-
-
-## Stargazers over time
-
-[![Stargazers over time](https://starchart.cc/dxli94/WLASL.svg)](https://starchart.cc/dxli94/WLASL)
